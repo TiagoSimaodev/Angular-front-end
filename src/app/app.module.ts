@@ -7,6 +7,7 @@ import {RouterModule, Routes} from '@angular/router'
 import { ModuleWithProviders } from '@angular/compiler/src/core';
 import { NgModule } from '@angular/core';
 import { LoginComponent } from './login/login.component';
+import { HttpInterceptorModule } from './service/header-interceptor.service';
 
 export const appRouters: Routes = [
   {path : 'home', component : HomeComponent},
@@ -27,7 +28,8 @@ export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
    BrowserModule,
     FormsModule,
     HttpClientModule,
-    routes
+    routes,
+    HttpInterceptorModule
     
   ],
   providers: [],
