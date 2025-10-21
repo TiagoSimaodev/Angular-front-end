@@ -1,3 +1,13 @@
+<br/>
+<br/>
+<form class="form-inline">
+  <div class="form-group mx-sm-3 mb-2">
+    <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="nome" placeholder="Pesquisa por nome">
+  </div>
+  <button type="button" (click)="consultarUser()" class="btn btn-primary mb-2">Buscar</button>
+</form>
+<br/>
+<br/>
 <table class="table">
 <thead class="thread-dark">
     <th scope="col">ID</th>
@@ -10,6 +20,7 @@
         <td>{{student.id}}</td>
          <td>{{student.nome}}</td>
           <td>{{student.cpf}}</td>
+          <td><button (click)="deleteUsuario(student.id)" class="btn btn-primary">Delete</button></td>
     </tr>
 </tbody>
 
